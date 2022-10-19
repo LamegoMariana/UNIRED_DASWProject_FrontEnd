@@ -1,0 +1,26 @@
+#myTab {
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+#logo {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#gridPerfil {
+    margin-top: 20px;
+}
+
+#separadorH > p {
+    color: white;
+}
+
+#informacion_personal > p {
+    font-style: oblique;
+}
+
+#nomRow > p {
+    font-style: italic;
+    font-size: small;
+} 
