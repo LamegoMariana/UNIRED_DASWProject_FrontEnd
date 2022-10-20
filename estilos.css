@@ -1,9 +1,11 @@
+/*Inicio*/
 #myTab {
-    margin-left: 5px;
+
+    margin-top: 5px;
 }
 
 #logo {
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 20px;
 }
 
@@ -23,3 +25,18 @@
     font-style: italic;
     font-size: small;
 } 
+
+/*General*/
+#divisores {
+    margin-top: 100px;
+}
+
+/*Campañas*/
+#textoE > ol {
+    text-align: justify;
+}
+
+#btnAñadir {
+    margin-bottom: 20px;
+}
+
