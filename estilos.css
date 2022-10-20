@@ -26,6 +26,10 @@
     font-size: small;
 } 
 
+/*MenuP*/
+#textoM > p {
+    text-align: justify;
+}
 /*General*/
 #divisores {
     margin-top: 100px;
