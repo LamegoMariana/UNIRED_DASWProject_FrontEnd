@@ -40,6 +40,10 @@
     text-align: justify;
 }
 
+#header_campaniaNE {
+    text-align: center;
+}
+
 #btnAñadir, #btn-reg, #btnBottom {
     margin-bottom: 20px;
 }

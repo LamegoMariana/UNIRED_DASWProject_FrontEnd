@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo escenario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+
+  <body>
+
+    <!--Barra de navegación-->
+    <ul class="nav nav-tabs bg-light" id="myTab">
+
+        <li class="nav-item" id="logo">
+            <a class="navbar-brand" href="MenuP.html">
+                <img src="UNIRED.png" alt="UNIRED ITESO" width="50" height="25">
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="Informe_Situacion.html">Informe de Situación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Solicitudes_Apoyo.html">Solicitudes de Apoyo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Campanias.html">Campañas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Zonas_Afectadas.html">Zonas Afectadas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Solicitantes.html">Solicitantes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Beneficiarios.html">Beneficiarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Evaluacion.html">Evaluación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Usuarios.html">Usuarios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Sesión</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Inicio.html">Perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!--Contenido de la página actual (Añadir un escenario de posible campaña)-->
+      <!--Grid para contenido, con divisiones por card-->
+      <div class="container" id="divisores">
+        <!--Título-->
+        <div class="row">
+          <div class="col">
+            <div id="header_campaniaNE">
+                <h3>Nuevo escenario de posible campaña.</h3>
+                <br>
+            </div>
+          </div>
+        </div>
+
+        <!---->
+        <div class="d-grid gap-2 col-3 mx-auto">
+          <form>
+            <!--Seleccionar solicitud relacionada-->
+            <div class="mb-3">
+                <select class="form-select" aria-label="Solicitud relacionada">
+                    <option selected>Seleccionar solicitud recibida</option>
+                    <option value="1">--</option>
+                    <option value="2">--</option>
+                    <option value="3">--</option>
+                </select>
+            </div>
+            <div class="mb-3">
+              <label for="TipoEscenario" class="form-label">Tipo de escenario</label>
+              <textarea class="form-control" id="TipoEscenario" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="NivelIntervencion" class="form-label">Nivel de intervención</label>
+                <textarea class="form-control" id="NivelIntervencion" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="Acciones" class="form-label">Acciones</label>
+                <textarea class="form-control" id="Acciones" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="Otros" class="form-label">Otros</label>
+              <textarea class="form-control" id="Otros" rows="3"></textarea>
+          </div>
+          <!--Botón enviar-->
+          <button type="submit" class="btn btn-primary" id="btnBottom">Subir</button>
+          </form>
+        </div>
+      </div>
+    
+</body>
+</html>

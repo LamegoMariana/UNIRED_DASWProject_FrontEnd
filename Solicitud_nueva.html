@@ -1,0 +1,239 @@
+<!--
+    Página donde se autorizan las solicitudes de Apoyo recibidas.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autorizar Solicitud de Apoyo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+
+  <body>
+
+
+<!--Barra de navegación-->
+<ul class="nav nav-tabs bg-light" id="myTab">
+
+    <li class="nav-item" id="logo">
+        <a class="navbar-brand" href="MenuP.html">
+            <img src="UNIRED.png" alt="UNIRED ITESO" width="50" height="25">
+        </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Informe_Situacion.html">Informe de Situación</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="Solicitudes_Apoyo.html">Solicitudes de Apoyo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Campanias.html">Campañas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Zonas_Afectadas.html">Zonas Afectadas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Solicitantes.html">Solicitantes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Beneficiarios.html">Beneficiarios</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Evaluacion.html">Evaluación</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Usuarios.html">Usuarios</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Sesión</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="Inicio.html">Perfil</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+      </ul>
+    </li>
+  </ul>
+
+    <!--Contenido de la página actual (Autorizar Solicitud de apoyo)-->
+    <!--Título-->
+    <div class="container text-center" id="divisores">  
+      <div class="row">
+        <div class="col">
+          <div id="header_informe">
+              <h3>Solicitud de apoyo.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Formulario-->
+        <div class="d-grid gap-2 col-3 mx-auto">
+          <form>
+            <hr>
+            <div class="mb-3">
+                <label for="MiembroAutorizarSol" class="form-label">Miembro del colectivo responsable de la recepción</label>
+                <input type="text" class="form-control" id="MiembroAutorizarSol" aria-describedby="MiembroHelp">
+            </div>
+            <div class="mb-3">
+                <select class="form-select" aria-label="Solicitud relacionada">
+                    <option selected>Seleccionar solicitud recibida</option>
+                    <option value="1">--</option>
+                    <option value="2">--</option>
+                    <option value="3">--</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="MiembroAutorizarSol" class="form-label">Veredicto de autorización de la Dirección de Integración Comunitaria (DIC)</label>
+                <select class="form-select" aria-label="Solicitud relacionada" id="MiembroAutorizarSol">
+                    <option selected>Estado...</option>
+                    <option value="1">Aceptada</option>
+                    <option value="2">Rechazada</option>
+                    <option value="3">Pendiente</option>
+                </select>
+            </div>
+            <hr>
+              <div class="mb-3">
+                  <label for="InputEvento1" class="form-label">Evento</label>
+                  <input type="text" class="form-control" id="InputEvento1" aria-describedby="EventoHelp">
+              </div>
+              <div class="mb-3">
+                  <label for="InputLugar1" class="form-label">Lugar (proporcionar coordinadas)</label>
+                  <input type="text" class="form-control" id="InputLugar1" aria-describedby="LugarHelp">
+              </div>
+              <p>¿El gobierno ya declaró la emergencia?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="emergencia" id="inlineRadio1" value="Si">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="emergencia" id="inlineRadio2" value="No">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+              </div>
+
+              <div class="mb-3">
+                <label for="InputFecha1" class="form-label">Fecha de ocurrencia</label>
+                <input type="date" class="form-control" id="InputFecha1" aria-describedby="FechalHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="InputFecha2" class="form-label">Fecha de elaboración solicitud</label>
+                <input type="date" class="form-control" id="InputFecha2" aria-describedby="FechaHelp">
+              </div>
+              <hr>
+              <h4>Impactos del evento adverso en la comunidad para la que se solicita el apoyo</h4>
+              <div class="mb-3">
+                <label for="saludPoblación" class="form-label">En la salud de la población</label>
+                <textarea class="form-control" id="saludPoblación" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="aguayambiente" class="form-label">En el agua y el ambiente</label>
+                <textarea class="form-control" id="aguayambiente" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="Infraestructura" class="form-label">En la infraestructura</label>
+                <textarea class="form-control" id="Infraestructura" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="Otrosdaños" class="form-label">Otros daños causados</label>
+                <textarea class="form-control" id="Otrosdaños" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="Inputpersonas1" class="form-label">Número de personas a atender en la zona de emergencia</label>
+                <input type="number" class="form-control" id="Inputpersonas1" aria-describedby="personasHelp">
+              </div>
+              <div class="mb-3">
+                <label for="ayudanecesaria" class="form-label">Identificación de ayuda necesaria:</label>
+                <textarea class="form-control" id="ayudanecesaria" rows="3"></textarea>
+              </div>
+               <hr>
+              <h4>Contactos que se encuentren en la comunidad.</H4>
+
+
+                <h5>Persona 1</h5>
+              <div class="mb-3">
+                <label for="InputSName1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="InputSName1" aria-describedby="SnemeHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="TeléfonoName1" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="TeléfonoName1" aria-describedby="TeléfonoHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="DirecciónName1" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="DirecciónName1" aria-describedby="DirecciónHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="RedesName1" class="form-label">Redes sociales</label>
+                <input type="text" class="form-control" id="RedesName1" aria-describedby="RedesHelp">
+              </div>
+
+              <h5>Persona 2</h5>
+              <div class="mb-3">
+                <label for="InputSName2" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="InputSName2" aria-describedby="SnemeHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="TeléfonoName2" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="TeléfonoName2" aria-describedby="TeléfonoHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="DirecciónName2" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="DirecciónName2" aria-describedby="DirecciónHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="RedesName2" class="form-label">Redes sociales</label>
+                <input type="text" class="form-control" id="RedesName2" aria-describedby="RedesHelp">
+              </div>
+
+              <h5>Persona 3</h5>
+              <div class="mb-3">
+                <label for="InputSName3" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="InputSName3" aria-describedby="SnemeHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="TeléfonoName3" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="TeléfonoName3" aria-describedby="TeléfonoHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="DirecciónName3" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="DirecciónName3" aria-describedby="DirecciónHelp">
+              </div>
+
+              <div class="mb-3">
+                <label for="RedesName3" class="form-label">Redes sociales</label>
+                <input type="text" class="form-control" id="RedesName3" aria-describedby="RedesHelp">
+              </div>
+                <hr>
+              <div class="mb-3">
+                <label for=" DatosSolicitante" class="form-label">Datos para contactar a quien hace la solicitud</label>
+                <textarea class="form-control" id=" DatosSolicitante" rows="4"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="comunicaciónSocialdelaregión" class="form-label">Medios de comunicación Social de la región</label>
+                <textarea class="form-control" id="comunicaciónSocialdelaregión" rows="4"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="RedesSocialesqueesténinformando" class="form-label">Redes Sociales que estén informando sobre la situación</label>
+                <textarea class="form-control" id="RedesSocialesqueesténinformando" rows="4"></textarea>
+              </div>
+             
+              <!--Botón enviar-->
+              <button type="submit" class="btn btn-primary" id="btnBottom">Autorizar</button>
+  
+          </form>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
