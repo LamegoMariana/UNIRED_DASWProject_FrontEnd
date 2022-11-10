@@ -32,7 +32,7 @@
 }
 /*General*/
 #divisores {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 /*Campañas*/
@@ -40,7 +40,7 @@
     text-align: justify;
 }
 
-#btnAñadir {
+#btnAñadir, #btn-reg, #btnBottom {
     margin-bottom: 20px;
 }
 

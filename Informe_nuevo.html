@@ -1,0 +1,484 @@
+<!--
+    Página donde se crean informes nuevos.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crear Informes de Situación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+
+  <body>
+
+    <!--Barra de navegación-->
+    <ul class="nav nav-tabs bg-light" id="myTab">
+
+        <li class="nav-item" id="logo">
+            <a class="navbar-brand" href="MenuP.html">
+                <img src="UNIRED.png" alt="UNIRED ITESO" width="50" height="25">
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Informe_Situacion.html">Informe de Situación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Solicitudes_Apoyo.html">Solicitudes de Apoyo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Campanias.html">Campañas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Zonas_Afectadas.html">Zonas Afectadas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Solicitantes.html">Solicitantes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Beneficiarios.html">Beneficiarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Evaluacion.html">Evaluación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Usuarios.html">Usuarios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Sesión</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Inicio.html">Perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!--Contenido de la página actual (Visualizar informe de situación)-->
+        <!--Grid para contenido, con divisiones por card-->
+        <div class="container text-center" id="divisores">
+            <!--Título-->
+            <div class="row">
+              <div class="col">
+                <div id="header_informe">
+                    <h3>Situación.</h3>
+                </div>
+              </div>
+            </div>
+
+             <!--Separador-->
+            <div class="row">
+                <div class="col-12" id="separadorH">
+                    <p>-</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Fomrulario Informe-->
+        <div class="d-grid gap-2 col-3 mx-auto">
+            <form>
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Solicitud relacionada">
+                        <option selected>Seleccionar solicitud recibida</option>
+                        <option value="1">--</option>
+                        <option value="2">--</option>
+                        <option value="3">--</option>
+                      </select>
+                </div>
+                <div class="mb-3">
+                    <label for="MiembroInforme" class="form-label">Miembro del colectivo que prepara el informe</label>
+                    <input type="text" class="form-control" id="MiembroInforme" aria-describedby="MiembroHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="TipoEvento" class="form-label">Tipo de evento</label>
+                    <input type="text" class="form-control" id="TipoEvento" aria-describedby="TipoHelp">
+                </div>            
+                <div class="mb-3">
+                    <label for="FechaEvento" class="form-label">Fecha del evento</label>
+                    <input type="date" class="form-control" id="FechaEvento" aria-describedby="FechalHelp">
+                </div>   
+                <div class="mb-3">
+                    <label for="Cronologia" class="form-label">Cronología de los hechos en la zona afectada</label>
+                    <textarea class="form-control" id="Cronologia" rows="3"></textarea>
+                </div>
+                <hr>
+                <h4>Información de la zona que solicita el apoyo</h4>
+                <div class="mb-3">
+                    <label for="InputFecha2" class="form-label">Fecha de la solicitud</label>
+                    <input type="date" class="form-control" id="InputFecha2" aria-describedby="FechaHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="PoblacionAfectada" class="form-label">Población afectada</label>
+                    <textarea class="form-control" id="PoblacionAfectada" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="DatosSolicitante" class="form-label">Datos del solicitante</label>
+                    <textarea class="form-control" id="DatosSolicitante" rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="ApoyoRequerido" class="form-label">Apoyo requerido</label>
+                    <textarea class="form-control" id="ApoyoRequerido" rows="4"></textarea>
+                </div>
+                <hr>
+                <h4>Información investigada</h4>
+                <h5>&emsp;Descripción del evento adverso</h5>
+                <div class="mb-3">
+                    <label for="saludPoblación" class="form-label">Impacto en la salud de la población</label>
+                    <textarea class="form-control" id="saludPoblación" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="AguaAmbiente" class="form-label">Impacto en el agua y el ambiente</label>
+                    <textarea class="form-control" id="AguaAmbiente" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                <label for="Infraestructura" class="form-label">Impacto en la infraestructura</label>
+                <textarea class="form-control" id="Infraestructura" rows="3"></textarea>
+                </div>
+                <hr>
+                <h4>Evaluación de daños y análisis de necesidades (EDAN)</h4>
+                <h5>&emsp;Causas</h5>
+                <div class="mb-3">
+                    <label for="CausasAmbientales" class="form-label">Causas ambientales</label>
+                    <textarea class="form-control" id="CausasAmbientales" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="CausasSociales" class="form-label">Causas sociales</label>
+                    <textarea class="form-control" id="CausasSociales" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="DescDesastre" class="form-label">Descripción del desastre</label>
+                    <textarea class="form-control" id="DescDesastre" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="OtrasLocAfec" class="form-label">Otras localidades afectadas</label>
+                    <textarea class="form-control" id="OtrasLocAfec" rows="3"></textarea>
+                </div>
+                <hr>
+                <h4>Situación de la población</h4>
+                <h5>&emsp;Población total</h5>
+                <div class="mb-3">
+                    <label for="Familias" class="form-label">Familias</label>
+                    <input type="text" class="form-control" id="Familias">
+                </div>
+                <div class="mb-3">
+                    <label for="Ninos" class="form-label">Niños</label>
+                    <input type="text" class="form-control" id="Ninos">
+                </div>
+                <div class="mb-3">
+                    <label for="Ninas" class="form-label">Niñas</label>
+                    <input type="text" class="form-control" id="Ninas">
+                </div>
+                <div class="mb-3">
+                    <label for="AdultosH" class="form-label">Hombres adultos</label>
+                    <input type="text" class="form-control" id="AdultosH">
+                </div>
+                <div class="mb-3">
+                    <label for="AdultosM" class="form-label">Mujeres adultas</label>
+                    <input type="text" class="form-control" id="AdultosM">
+                </div>
+                <h5>&emsp;Población afectada</h5>
+                <div class="mb-3">
+                    <label for="FamiliasA" class="form-label">Familias</label>
+                    <input type="text" class="form-control" id="FamiliasA">
+                </div>
+                <div class="mb-3">
+                    <label for="NNA" class="form-label">Niños, niñas y adolescentes</label>
+                    <input type="text" class="form-control" id="NNA">
+                </div>
+                <div class="mb-3">
+                    <label for="Adultos" class="form-label">Adultos</label>
+                    <input type="text" class="form-control" id="Adultos">
+                </div>
+                <div class="mb-3">
+                    <label for="PersonasD" class="form-label">Personas discapacitadas (cualquier tipo) </label>
+                    <input type="text" class="form-control" id="PersonasD">
+                </div>
+                <h5>&emsp;Población evacuada</h5>
+                <div class="mb-3">
+                    <label for="FamiliasE" class="form-label">Familias</label>
+                    <input type="text" class="form-control" id="FamiliasE">
+                </div>
+                <div class="mb-3">
+                    <label for="NNAE" class="form-label">Niños, niñas y adolescentes</label>
+                    <input type="text" class="form-control" id="NNAE">
+                </div>
+                <div class="mb-3">
+                    <label for="AdultosE" class="form-label">Adultos</label>
+                    <input type="text" class="form-control" id="AdultosE">
+                </div>
+                <h5>&emsp;Salud de la población</h5>
+                <div class="mb-3">
+                    <label for="Heridos" class="form-label">Heridos</label>
+                    <input type="text" class="form-control" id="Heridos">
+                </div>
+                <div class="mb-3">
+                    <label for="Desaparecidos" class="form-label">Desaparecidos</label>
+                    <input type="text" class="form-control" id="Desaparecidos">
+                </div>
+                <div class="mb-3">
+                    <label for="Fallecidos" class="form-label">Fallecidos</label>
+                    <input type="text" class="form-control" id="Heridos">
+                </div>
+                <div class="mb-3">
+                    <label for="EnfResp" class="form-label">Enfermedades respiratorias</label>
+                    <input type="text" class="form-control" id="EnfResp">
+                </div>
+                <div class="mb-3">
+                    <label for="EnfGast" class="form-label">Enfermedades gastrointestinales</label>
+                    <input type="text" class="form-control" id="EnfGast">
+                </div>
+                <div class="mb-3">
+                    <label for="EnfPiel" class="form-label">Enfermedades de piel</label>
+                    <input type="text" class="form-control" id="EnfPiel">
+                </div>
+                <div class="mb-3">
+                    <label for="EnfResp" class="form-label">Enfermedades respiratorias</label>
+                    <input type="text" class="form-control" id="EnfResp">
+                </div>
+                <h5>&emsp;Necesidades detectadas</h5>
+                <div class="mb-3">
+                    <label for="TipoN" class="form-label">Tipo</label>
+                    <input type="text" class="form-control" id="TipoN">
+                </div>
+                <div class="mb-3">
+                    <label for="Cantidad" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" id="Cantidad">
+                </div>
+                <div class="mb-3">
+                    <label for="ApoyoRe" class="form-label">Apoyo recibido</label>
+                    <input type="text" class="form-control" id="ApoyoRe">
+                </div>
+                <div class="mb-3">
+                    <label for="DeQuien" class="form-label">De quien</label>
+                    <input type="text" class="form-control" id="DeQuien">
+                </div>
+                <div class="mb-3">
+                    <label for="MedidasG" class="form-label"><h5>&emsp;Medidas gubernamentales</h5><h5>&emsp;implementadas</h5></label>
+                    <textarea class="form-control" id="MedidasG" rows="3"></textarea>
+                </div>
+                <h5>&emsp;Nivel de respuesta en zona</h5>
+                <div class="mb-3">
+                    <label for="AcPob" class="form-label">Acciones de la población</label>
+                    <input type="text" class="form-control" id="AcPob">
+                </div>
+                <div class="mb-3">
+                    <label for="QuienesMov" class="form-label">Quienes se están movilizando para apoyar a los damnificados</label>
+                    <input type="text" class="form-control" id="QuienesMov">
+                </div>
+                <div class="mb-3">
+                    <label for="AyudaInt" class="form-label"><h5>&emsp;Ayuda internacional</h5></label>
+                    <input type="text" class="form-control" id="AyudaInt">
+                </div>
+                <div class="mb-3">
+                    <label for="DecEmergencia" class="form-label"><h5>&emsp;Declaratoria de emergencia por el</h5><h5>&emsp;gobierno</h5></label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="emergencia" id="DecEmergencia" value="Si">
+                        <label class="form-check-label" for="DecEmergencia">Decretada</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="emergencia" id="DecEmergencia" value="No">
+                        <label class="form-check-label" for="DecEmergencia">No decretada</label>
+                      </div>
+                </div>
+                <h5>&emsp;Afectaciones en infraestructura de la</h5><h5>&emsp;comunidad</h5>
+                <div class="mb-3">
+                    <label for="TipoViviendas" class="form-label">Tipo de viviendas o edificios</label>
+                    <input type="text" class="form-control" id="TipoViviendas">
+                </div>
+                <div class="mb-3">
+                    <label for="NumTotalV" class="form-label">Número total</label>
+                    <input type="text" class="form-control" id="NumTotalV">
+                </div>
+                <div class="mb-3">
+                    <label for="NumParcialV" class="form-label">Número de afectación parcial</label>
+                    <input type="text" class="form-control" id="NumParcialV">
+                </div>
+                <div class="mb-3">
+                    <label for="PerdidaTotal" class="form-label">Pérdida total</label>
+                    <input type="text" class="form-control" id="PerdidaTotal">
+                </div>
+                <div class="mb-3">
+                    <label for="DescAfect" class="form-label">Descripción de la afectación</label>
+                    <textarea class="form-control" id="DescAfect" rows="3"></textarea>
+                </div>    
+                <h5>&emsp;Afectaciones en infraestructura urbana</h5><h5>&emsp;de la comunidad</h5>
+                <div class="mb-3">
+                    <label for="InfraUrb" class="form-label">Infraestructura</label>
+                    <input type="text" class="form-control" id="InfraUrb">
+                </div>
+                <div class="mb-3">
+                    <label for="TotalInfComUrb" class="form-label">Total en la localidad</label>
+                    <input type="text" class="form-control" id="TotalInfComUrb">
+                </div>
+                <div class="mb-3">
+                    <label for="AfectacionPUrb" class="form-label">Afectación parcial</label>
+                    <input type="text" class="form-control" id="AfectacionPUrb">
+                </div>
+                <div class="mb-3">
+                    <label for="PerdidaTotalUrb" class="form-label">Pérdida total</label>
+                    <input type="text" class="form-control" id="PerdidaTotalUrb">
+                </div>
+                <div class="mb-3">
+                    <label for="DescpAfectUrb" class="form-label">Descripción de la afectación</label>
+                    <input type="text" class="form-control" id="DescpAfectUrb">
+                </div>
+                <h5>&emsp;Afectaciones en actividades</h5><h5>&emsp;productivas</h5>
+                <div class="mb-3">
+                    <label for="Agricola" class="form-label">Agrícola</label>
+                    <input type="text" class="form-control" id="Agricola">
+                </div>
+                <div class="mb-3">
+                    <label for="HectTotales" class="form-label">Hectáreas totales</label>
+                    <input type="text" class="form-control" id="HectTotales">
+                </div>
+                <div class="mb-3">
+                    <label for="HectAfectadas" class="form-label">Hectáreas afectadas</label>
+                    <input type="text" class="form-control" id="HectAfectadas">
+                </div>
+                <div class="mb-3">
+                    <label for="PerdidaProduccion" class="form-label">Pérdida de producción</label>
+                    <input type="text" class="form-control" id="PerdidaProduccion">
+                </div>
+                <div class="mb-3">
+                    <label for="DescpAfectAct" class="form-label">Descripción de la afectación</label>
+                    <textarea class="form-control" id="DescpAfectAct" rows="3"></textarea>
+                </div>
+                <h5>&emsp;Animal</h5>
+                <div class="mb-3">
+                    <label for="TipoAnimal" class="form-label">Tipo</label>
+                    <input type="text" class="form-control" id="TipoAnimal">
+                </div>
+                <div class="mb-3">
+                    <label for="TotalAnimal" class="form-label">Total en la localidad</label>
+                    <input type="text" class="form-control" id="TotalAnimal">
+                </div>
+                <div class="mb-3">
+                    <label for="AfectacionPAnimal" class="form-label">Afectación parcial</label>
+                    <input type="text" class="form-control" id="AfectacionPAnimal">
+                </div>
+                <div class="mb-3">
+                    <label for="PerdidaTotalAnimal" class="form-label">Pérdida total</label>
+                    <input type="text" class="form-control" id="PerdidaTotalAnimal">
+                </div>
+                <div class="mb-3">
+                    <label for="DescpAfectAnimal" class="form-label">Descripción de la afectación</label>
+                    <textarea class="form-control" id="DescpAfectAnimal" rows="3"></textarea>
+                </div>
+                <h5>&emsp;Comercio</h5>
+                <div class="mb-3">
+                    <label for="TipoComercio" class="form-label">Tipo</label>
+                    <input type="text" class="form-control" id="TipoComercio">
+                </div>
+                <div class="mb-3">
+                    <label for="TotalComercio" class="form-label">Total en la localidad</label>
+                    <input type="text" class="form-control" id="TotalComercio">
+                </div>
+                <div class="mb-3">
+                    <label for="AfectacionPComercio" class="form-label">Afectación parcial</label>
+                    <input type="text" class="form-control" id="AfectacionPComercio">
+                </div>
+                <div class="mb-3">
+                    <label for="PerdidaTotalComercio" class="form-label">Pérdida total</label>
+                    <input type="text" class="form-control" id="PerdidaTotalComercio">
+                </div>
+                <div class="mb-3">
+                    <label for="DescpAfectComercio" class="form-label">Descripción de la afectación</label>
+                    <textarea class="form-control" id="DescpAfectComercio" rows="3"></textarea>
+                </div>
+                <h5>&emsp;Mapa de aliados estratégicos</h5><h5>&emsp;en la zona y en la región</h5>
+                <div class="mb-3">
+                    <label for="NombreAliado" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="NombreAliado">
+                </div>
+                <div class="mb-3">
+                    <label for="TipoOrganizacion" class="form-label">Tipo de organización: </label>
+                    <select class="TipoOrganizacion" aria-label="Tipo Organizacion">
+                        <option selected>Seleccionar</option>
+                        <option value="1">OSC</option>
+                        <option value="2">Gobierno</option>
+                        <option value="3">Empresa</option>
+                        <option value="4">Universidad</option>
+                        <option value="5">Otra</option>
+                      </select>
+                </div>
+                <div class="mb-3">
+                    <label for="Recursos" class="form-label">Recursos con los que cuenta</label>
+                    <input type="text" class="form-control" id="Recursos">
+                </div>
+                <div class="mb-3">
+                    <label for="EnQuePuedeAyudar" class="form-label">En que puede apoyar</label>
+                    <input type="text" class="form-control" id="EnQuePuedeAyudar">
+                </div>
+                <div class="mb-3">
+                    <label for="TelefonoAliado" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="TelefonoAliado">
+                </div>
+                <div class="mb-3">
+                    <label for="CorreoAliado" class="form-label">Correo</label>
+                    <input type="text" class="form-control" id="CorreoAliado">
+                </div>
+                <div class="mb-3">
+                    <label for="RedesAliado" class="form-label">Redes sociales</label>
+                    <textarea class="form-control" id="RedesAliado" rows="3"></textarea>
+                </div>
+                <hr>
+                <h4>Plan de contingencia</h4>
+                <div class="mb-3">
+                    <label for="capacidadResp" class="form-label">
+                        <h5>&emsp;Capacidad de respuesta de las</h5><h5>&emsp;instituciones gubernamentales</h5>
+                    </label>
+                    <textarea class="form-control" id="capacidadResp" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="capacidadResp" class="form-label">
+                        <h5>&emsp;Capacidad de respuesta de las OSC</h5><h5>&emsp;(Organizaciones de la Sociedad Civil)</h5>
+                    </label>
+                    <textarea class="form-control" id="capacidadResp" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="capacidadResp" class="form-label">
+                        <h5>&emsp;Identificar las zonas más vulnerables</h5>
+                        <h5>&emsp;y cruzar la información con la solicitud</h5>
+                        <h5>&emsp;de las contrapartes</h5>
+                    </label>
+                    <textarea class="form-control" id="capacidadResp" rows="3"></textarea>
+                </div>
+                <h5>Análisis de seguridad</h5>
+                <div class="mb-3">
+                    <label for="CaminoAdecuado" class="form-label">Camino adecuado</label>
+                    <textarea class="form-control" id="CaminoAdecuado" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="LibreObstaculos" class="form-label">Libre de obstáculos</label>
+                    <textarea class="form-control" id="LibreObstaculos" rows="3"></textarea>
+                </div>
+                <h5>Identificación de ayuda necesaria</h5>
+                <div class="mb-3">
+                    <input type="radio" name="AguaPotable" id="AguaPotable">
+                    <label for="AguaPotable">Agua potable</label>
+                  </div>
+                  <div class="mb-3">
+                    <input type="radio" name="DepositosAgua" id="DepositosAgua">
+                    <label for="DepositosAgua">Depósitos de agua</label>
+                  </div>
+                  <div class="mb-3">
+                    <input type="radio" name="Viveres" id="Viveres">
+                    <label for="Viveres">Víveres</label>
+                  </div>
+                  <div class="mb-3">
+                    <input type="radio" name="AlberguesTemp" id="AlberguesTemp">
+                    <label for="AlberguesTemp">Albergues temporales</label>
+                  </div>
+                <!--Botón enviar-->
+                <button type="submit" class="btn btn-primary" id="btnBottom">Enviar</button>
+    
+            </form>
+        </div>
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
