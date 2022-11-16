@@ -30,6 +30,12 @@
 #textoM > p {
     text-align: justify;
 }
+
+.centrar {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 /*General*/
 #divisores {
     margin-top: 50px;
