@@ -67,6 +67,23 @@
             </div>
           </div>
 
+          <!--Separador-->
+          <div class="row">
+            <div class="col-12" id="separadorH">
+                <p>-</p>
+            </div>
+        </div>
+
+        <!--Buscador-->
+        <div class="row">
+            <div class="col-5">
+                <div class="input-group" id="buscador">
+                    <input type="text" class="form-control" id="id-buscador" placeholder="Ingresar ID usuario...">
+                    <button class="btn btn-outline-primary" type="submit" id="bt-buscador">Buscar</button>
+                </div>
+            </div>
+        </div>
+
            <!--Separador-->
           <div class="row">
               <div class="col-12" id="separadorH">
@@ -81,20 +98,19 @@
                   <div class="col-9">
                       <div class="card">
                           <div class="card-body">
-                          <table class="table">
+                          <table class="table" id="headers-table">
                                   <thead>
                                       <tr>
+                                          <th scope="col"><p>ID</p></th>
                                           <th scope="col"><p>Nombre</p></th>
                                           <th scope="col"><p>Apellido</p></th>
-                                          <th scope="col"><p>Contraseña</p></th>
                                           <th scope="col"><p>Correo electrónico</p></th>
-                                          <th scope="col"> <p>Privilegios/Tipo de usuario</p></th>
+                                          <th scope="col"><p>Teléfono</p></th>
+                                          <th scope="col"><p>Privilegios</p></th>
                                       </tr>
                                   </thead>
-                                  <tbody>
-                                      <tr>
-                                          <!--td-->
-                                      </tr>
+                                  <tbody id="usuarios-table">
+                      
                                   </tbody>
                               </table>
                           </div>
@@ -109,12 +125,82 @@
                             <p class="card-text">Dar click en un botón para ejecutar alguna operación.</p>
                             
                             <div class="btn-group" role="group" aria-label="butones_acciones">
-                              <button type="button" class="btn btn-success">Crear</button>
-                              <button type="button" class="btn btn-warning">Actualizar</button>
-                              <button type="button" class="btn btn-danger">Eliminar</button>
+                              <a type="button" class="btn btn-success" href="Registro.html">Crear</a>
+
+                              <!-- Butón actualizar modal -->
+                              <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#actualizarModal">Actualizar</button>
+
+                              <!-- Modal -->
+                              <div class="modal fade" id="actualizarModal" tabindex="-1" aria-labelledby="actualizarModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="actualizarModalLabel">Ingresa datos para actualizar:</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form>
+                                        <div class="mb-3">
+                                          <label for="id-actualizar" class="form-label">ID</label>
+                                          <input type="text" class="form-control" id="id-actualizar">
+                                          <form id="formulario-actualizar">
+                                            <div class="mb-3">
+                                                <label for="InputName1" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="InputName1" aria-describedby="nemeHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="Inputlastn1" class="form-label">Apellido</label>
+                                                <input type="text" class="form-control" id="Inputlastn1" aria-describedby="lastnHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="InputEmail1" class="form-label">Correo electrónico</label>
+                                                <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                              <label for="InputTelefono" class="form-label">Teléfono</label>
+                                              <input type="text" class="form-control" id="InputTelefono" aria-describedby="telefonoHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                              <label for="InputPrivilegios1" class="form-label">Privilegios</label>
+                                              <input type="text" class="form-control" id="InputPrivilegios1" aria-describedby="privilegiosHelp">
+                                          </div>                                
+                                        </form>
+                                        </div>
+                                      </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-warning"id="bt-actualizar">Actualizar usuario</button>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                          </div>
-                        </div>
+                              
+                              <!-- Butón eliminar modal -->
+                              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarModal">Eliminar</button>
+
+                              <!-- Modal -->
+                              <div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="eliminarModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="eliminarModalLabel">Ingresa ID del usuario para eliminar:</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form>
+                                        <div class="mb-3">
+                                          <input type="text" class="form-control" id="id-eliminar">
+                                        </div>
+                                      </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-danger"id="bt-eliminar">Eliminar usuario</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                       
                   </div>
               </div>
@@ -123,5 +209,7 @@
 
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!--Integración (conexión a js de usuarios)-->
+    <script src="./usuarios.js"></script>
   </body>
 </html>
