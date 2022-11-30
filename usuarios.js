@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = document.querySelector('#id-buscador').value;
         console.log(id);
         
-        fetch('http://localhost:3000/api/usuarios/' + id).then(response => response.json()).then(data => {
+        fetch('http://localhost:3000/api/usuarios/' + id, {method: 'POST'}).then(response => response.json()).then(data => {
             const usuario = data;
             const contenedor = document.querySelector('#usuarios-table');
             console.log(usuario);

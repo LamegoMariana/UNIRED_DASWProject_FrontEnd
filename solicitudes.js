@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Visualizar un usuario
+// Visualizar una solicitud
 document.addEventListener('DOMContentLoaded', () => {
     const verUno = document.getElementById('bt-buscador');
     verUno.addEventListener('click', (el) => {
